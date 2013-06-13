@@ -11,10 +11,6 @@ This fork includes the following additions and enhancements:
 - Supports clean URLs.
 - Works just fine with [MathJax][mj] for rendering using [LaTeX][tx] (math syntax). (Just remember to use `\newline` for multiple lines instead of `\n`.)
 
-### Screenshot
-
-- [Screenshot][scr].
-
 ## What it does not do
 
 Chisel keeps it simple and stupid. And so, there is
@@ -73,7 +69,7 @@ To update these packages, you may run the following:
 	$ cd ~/site
 	$ mkdir posts www chisel
 
-Now download Chisel as a zip file or via git (`git clone git://github.com/ckunte/chisel.git`). Move the unzipped contents into `chisel` folder created above. The structure should look like this following:
+Now download Chisel as a zip file or via git (`git clone git://github.com/ckg/chisel.git`). Move the unzipped contents into `chisel` folder created above. The structure should look like this following:
 
 	~/site/
 	~/site/posts/
@@ -258,9 +254,9 @@ Create and save a bookmarklet via [Pingomatic][p]. Alternatively, put the follow
     ps = "http://rpc.pingomatic.com/RPC2"
 
     # Your site's title, url and rss:
-    title = "ckunte.net log"
-    url = "http://log.ckunte.net"
-    rss = "http://log.ckunte.net/rss"
+    title = "Your site title"
+    url = "http://yourwebsite.com"
+    rss = "http://yourwebsite.com/rss"
 
     remoteServer = xmlrpclib.Server(ps)
     ret = remoteServer.weblogUpdates.ping(title, url, rss)
@@ -274,7 +270,7 @@ Easy. Put this in a script (say, `log.sh`, for example) like the example below (
 	echo ""
 	cd ~/Sites/chisel
 	python chisel.py
-	cd ~/Sites/ckunte.github.com
+	cd ~/Sites/ckg.github.com
 	echo "Updating log.."
 	git add -A
 	git commit -m 'Updating log.'
@@ -308,7 +304,6 @@ When you're ready to generate and post it to your site, run `sh log.sh`, and you
 [u]: http://www.ubuntu.com/
 [m]: http://www.apple.com/macosx
 [pip]: http://pypi.python.org/pypi/pip
-[scr]: http://log.ckunte.net/images/chisel.png
 [nb]: http://nedbatchelder.com/blog/200406/pingomatic_and_xmlrpc.html "Ping-o-matic and xml-rpc"
 [p]: http://pingomatic.com/
 [mj]: http://www.mathjax.org/
