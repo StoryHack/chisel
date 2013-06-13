@@ -1,43 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" >        
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>nodnod.net</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="/css/global.css" />
-    {% block extra_css %}{% endblock %}
-    <!--[if lte IE 6]>
-        <link rel="stylesheet" type="text/css" href="/css/ie6.css" />
-    <![endif]-->
-    <!--[if IE 7]>
-        <link rel="stylesheet" type="text/css" href="/css/ie7.css" />
-    <![endif]-->
-    <script src="/js/jquery.js" type="text/javascript"></script>
-    <script src="/js/global.js" type="text/javascript"></script>
-    {% block extra_js %}{% endblock %}
-    <script type="text/javascript">
-        document.write('<link rel="stylesheet" type="text/css" href="/css/js.css"');
-    </script>
-</head>
+ <meta charset="utf-8">
+ <title>antinode.dev{%block title %}{% endblock %}</title>
+ <meta name="description" content="Journal by an offshore engineer.">
+ <meta name="viewport" content="width=702">
+ <link rel="icon" href="/favicon.ico">
+ <link rel="stylesheet" href="/css/style.css" type="text/css">
+ <link rel="alternate" type="application/rss+xml" title="antinode.dev" href="/rss.xml">
+ </head>
 <body>
-    <div id="wrapper">
-        {% block body %}
-            <div id="nav">
-                <p><a href="/">Home</a> | <a href="/archives.html">Archives</a></p>
-            </div>
-            <div id="header">
-                <h1>nodnod.net</h2>
-                {% block header %}{% endblock %}
-            </div>
-
-            <div id="main">
-                {% block main %}{% endblock %}
-            </div>
-
-            <div id="footer">
-                {% block footer %}{% endblock %}
-            </div>
-        {% endblock %}
-    </div>
+ <div id="wrap">
+  <div id="content">
+   <h1><a title="antinode home" href="/">antinode</a> is a personal journal by an offshore engineer.</h1>
+   <p class="spacer">&nbsp;</p>
+    <div id="left">
+     <div id="nav">
+      <ul>
+       {% for href, caption, description in [('/colophon', 'Colophon', 'About this site.'), ('https://github.com/ckg', 'Code', 'Fork.'), ('/rss.xml', 'RSS', 'antinode.dev')] -%}
+        <li><a title="{{ description }}" href="{{ href }}">{{ caption }}</a></li>
+       {% endfor -%}
+      </ul>
+     </div> <!-- /nav -->
+    </div> <!-- /left -->
+      {% block body %}
+          {% block post %}{% endblock %}
+          {% block footer %}{% endblock %}
+      {% endblock %}
+  </div> <!-- /content -->
+     <div id="footer"><span class="navcenter">Copyright &copy; Chyetanya Kunt&eacute;</span></div>
+ </div> <!-- /wrap -->
+  <script type="text/javascript">
+  (function () {
+      var mjx = document.createElement('script');
+      mjx.type = 'text/javascript';
+      mjx.src = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML';
+      mjx.async = true;
+      var k = document.getElementsByTagName('script')[0];
+      k.parentNode.insertBefore(mjx, k);
+  })();
+  </script>
 </body>
 </html>
