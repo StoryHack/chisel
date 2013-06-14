@@ -1,6 +1,6 @@
 # Chisel
 
-Written by [David Zhou][dz] in [python][py], forked and enhanced by [ckg][] for his personal use, [Chisel][ch] is an amazing blog engine -- all in just one file. 
+Written by [David Zhou][dz] in [python][py], forked and enhanced by [ckunte][] for his personal use, [Chisel][ch] is an amazing blog engine -- all in just one file. 
 
 This fork includes the following additions and enhancements:
 
@@ -307,4 +307,4 @@ When you're ready to generate and post it to your site, run `sh log.sh`, and you
 [p]: http://pingomatic.com/
 [mj]: http://www.mathjax.org/
 [tx]: http://en.wikipedia.org/wiki/LaTeX
-[ckg]: https://github.com/ckg
+[ckg]: https://github.com/ckunte
