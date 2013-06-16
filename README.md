@@ -307,4 +307,4 @@ When you're ready to generate and post it to your site, run `sh log.sh`, and you
 [p]: http://pingomatic.com/
 [mj]: http://www.mathjax.org/
 [tx]: http://en.wikipedia.org/wiki/LaTeX
-[ckg]: https://github.com/ckunte
+[ckunte]: https://github.com/ckunte
