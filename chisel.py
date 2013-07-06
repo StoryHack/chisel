@@ -28,11 +28,11 @@ import datetime
 #     /antinode (the generated html site from post files)
 # the locations are used thus:
 #
-BASEURL = "http://antinode.co/" #end with slash
+BASEURL = "http://yoursiteurl.ext/" #end with slash
 # The following tells chisel where to look for native posts:
 SOURCE = "../posts/" #end with slash
 #  The following tells chisel where to generate site:
-DESTINATION = "../antinode.co/" #end with slash
+DESTINATION = "../yoursiteurl.ext/" #end with slash
 HOME_SHOW = 3 #numer of entries to show on homepage
 TEMPLATE_PATH = "./templates/"
 TEMPLATE_OPTIONS = {}
@@ -55,9 +55,9 @@ URLEXT = ""
 # set PATHEXT = "" if URLEXT = ".html" and vice versa.
 PATHEXT = ".html"
 RSS = PyRSS2Gen.RSS2(
-    title = "antinode.co",
+    title = "Site title",
     link = BASEURL + "rss.xml",
-    description = "Journal by Chyetanya Kunte.",
+    description = "Description of site.",
     lastBuildDate = datetime.datetime.now(),
     items = [])
 #########
