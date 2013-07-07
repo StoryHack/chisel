@@ -11,6 +11,10 @@ This fork includes the following additions and enhancements:
 - Supports clean URLs.
 - Works just fine with [MathJax][mj] for rendering using [LaTeX][tx] (math syntax). (Just remember to use `\newline` for multiple lines instead of `\n`.)
 
+## Example blog
+
+- [ckunte.net/log](http://ckunte.net/log/)
+
 ## What it does not do
 
 Chisel keeps it simple and stupid. And so, there is

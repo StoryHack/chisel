@@ -28,13 +28,13 @@ import datetime
 #     /antinode (the generated html site from post files)
 # the locations are used thus:
 #
-BASEURL = "http://yoursiteurl.ext/" #end with slash
+BASEURL = "http://ckunte.net/log/" #end with slash
 # The following tells chisel where to look for native posts:
-SOURCE = "../posts/" #end with slash
+SOURCE = "/Users/ckunte/Sites/posts/" #end with slash
 #  The following tells chisel where to generate site:
-DESTINATION = "../yoursiteurl.ext/" #end with slash
+DESTINATION = "/Users/ckunte/Sites/ckunte.github.io/log/" #end with slash
 HOME_SHOW = 3 #numer of entries to show on homepage
-TEMPLATE_PATH = "./templates/"
+TEMPLATE_PATH = "/Users/ckunte/Sites/chisel/themevanilla/" #end with slash
 TEMPLATE_OPTIONS = {}
 TEMPLATES = {
     'home': "home.html",
@@ -43,7 +43,7 @@ TEMPLATES = {
     'colophon': "colophon.html",
     '404': "404.html",
 }
-TIME_FORMAT = "%b %d, %Y"
+TIME_FORMAT = "%B %d, %Y"
 ENTRY_TIME_FORMAT = "%m/%d/%Y"
 #FORMAT should be a callable that takes in text
 #and returns formatted text
@@ -55,9 +55,9 @@ URLEXT = ""
 # set PATHEXT = "" if URLEXT = ".html" and vice versa.
 PATHEXT = ".html"
 RSS = PyRSS2Gen.RSS2(
-    title = "Site title",
+    title = "ckunte.net log",
     link = BASEURL + "rss.xml",
-    description = "Description of site.",
+    description = "Journal by Chyetanya Kunte.",
     lastBuildDate = datetime.datetime.now(),
     items = [])
 #########

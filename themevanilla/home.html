@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{%- block post -%}
+  {%- for entry in entries -%}
+	<div class="post">
+    <p class="date">{{ entry.pretty_date }}</p>
+    <h2><a href="/log/{{ entry.url }}">{{ entry.title }}</a></h2>
+	   {{ entry.content }}
+  </div>
+  {%- endfor %}
+  <div class="navleft">
+  	<a rel="prev prefetch" href="/log/archive">&lsaquo;&nbsp;Archive</a>
+  </div>
+{%- endblock %}

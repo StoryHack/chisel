@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%- block title -%}: Archive{%- endblock %}
+
+{%- block header -%}
+{%- endblock %}
+
+{%- block post %}
+	<div class="post">
+	 <h2>Archive</h2>
+	 <p><img src="/log/images/streetview-near-pantheon.jpg"></p>
+	 <p>There are {{ entries|length }} posts in this archive.</p>
+
+	 {%- for year, year_list in entries|groupby('year')|reverse -%}
+	 <h3><small>{{ year }}</small></h3>
+	 <ul class="archive">
+	   {%- for month, month_list in year_list|groupby('month')|reverse -%}
+	     {%- for day, day_list in month_list|groupby('day')|reverse -%}
+	       {%- for entry in day_list -%}
+	         <li class="list"><a href="/log/{{ entry.url }}">{{ entry.title }}</a>&nbsp;<small>in&nbsp;{{ entry.content|wordcount }} words&nbsp;&ndash;&nbsp;{{ entry.pretty_date }}</small></li>
+	       {%- endfor %}
+	     {%- endfor %}
+	   {%- endfor %}
+	 </ul>
+	 {%- endfor %}
+	</div>
+{%- endblock %}

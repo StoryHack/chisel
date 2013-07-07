@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>ckunte.net log{%block title %}{% endblock %}</title>
+ <meta name="description" content="Personal journal by Chyetanya Kunte.">
+ <meta name="viewport" content="width=720">
+ <link rel="icon" href="/favicon.ico">
+ <link rel="stylesheet" href="/log/css/vanilla.css" type="text/css">
+ <link rel="alternate" type="application/rss+xml" title="ckunte.net log" href="/log/rss.xml">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1><span>I&rsquo;m</span> <a title="About the author and is site." href="/log/colophon">Chyetanya Kunt&eacute;</a><span>. This is a </span><a title="Home" href="/log/">personal log</a>.</h1>
+        </div><!-- /header -->
+
+        {%- block body -%}
+            {%- block post %}{%- endblock %}
+            {%- block footer %}{%- endblock %}
+        {%- endblock %}
+
+        <div id="footer"><p>Copyright &copy; 2001&ndash;13 Chyetanya Kunt&eacute;</p></div><!-- /footer -->
+    </div><!-- /container -->
+
+    <!-- MathJax -->
+    <script type="text/javascript">
+        (function () {
+            var mjx = document.createElement('script');
+            mjx.type = 'text/javascript';
+            mjx.src = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML';
+            mjx.async = true;
+            var k = document.getElementsByTagName('script')[0];
+            k.parentNode.insertBefore(mjx, k);
+        })();
+    </script>
+    <!-- /MathJax -->
+    <script type="text/javascript">
+    (function () {
+        var ma = document.createElement('script');
+        ma.type = 'text/javascript';
+        ma.src = 'http://m.ckunte.net/mint/?js';
+        ma.async = true;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ma, s);
+    })();
+    </script>        
+</body>
+</html>
